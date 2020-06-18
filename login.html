@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <form class="form">
+        <div class="card">
+            <div class="cardtop">
+                <img class="img" src="img.png" alt="Não carregado">
+                <h3 class="titulo">Painel de Usuário</h3>
+
+            </div>
+
+            <div class="cardmid">
+                <label>Login:</label>
+                <input type="text" name="usuario" id="loginid" placeholder="Digite seu login">
+            </div>
+
+            <div class="cardmid">
+                <label>Senha:</label>
+                <input type="password" name="senha" id="senhaid" placeholder="Digite sua senha">
+            </div>
+
+            <div class="cardmid">
+                <label><input type="checkbox">Lembre-me</label>  
+            </div>
+
+            <div class="cardmid">
+                <button type="submit" value="acessar" onClick="autenticar()">ENTRAR</button>
+            </div>
+
+            <div class="cardbot"></div>
+        </div>
+   
+    </form>
+    
+
+    
+<script>
+
+const users = ["joao", "caio", "bruno"]
+const pws = ["1234", "senha", "senha123"]
+
+function autenticar() {
+
+        const usuario = document.getElementById('loginid').value
+        const senha = document.getElementById('senhaid').value
+        for (i=0; i < users.length && pws.length; i++)
+            if(users.length == pws.length) {
+                window.alert("Usuário autenticado.") 
+                break;
+
+            } else {
+                if(users.length > 3 && pws.length < 3) {
+                    window.alert("Usuário invalido.") 
+                    break;
+
+                } else {
+                    if(users.length < 3 && pws.length > 3) {
+                    window.alert("Senha invalida.") 
+                    break;
+
+            }          
+        }
+    }            
+};
+
+</script>
+</body>
+</html>
+
